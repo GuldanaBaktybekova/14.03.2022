@@ -14,20 +14,33 @@
     <div id="root"></div>
 
     <script type="text/babel">
-      ReactDOM.render((
+      ReactDOM.render(
         <div>
           <Person name="Guldana" lastName="Baktybekova" />
-          <Sum a={5} b={10}/>
-          <Sum a={10} b={5}/>
-          <Sum a={10} b={5}/>
-        </div>
-      ), document.querySelector('#root'));
+          <Sum a={5} b={10} />
+          <Sum a={10} b={5} />
+          <Larger a={10} b={5} />
+          <Larger a={5} b={10} />
+        </div>,
+        document.querySelector("#root")
+      );
 
       function Person(props) {
-        return <div>My name is {props.name} {props.lastName}</div>;
+        return (
+          <div>
+            My name is {props.name} {props.lastName}
+          </div>
+        );
       }
       function Sum(props) {
         return <div> {props.a + props.b}</div>;
+      }
+      function Larger(props) {
+        if ({ a } > { b }) {
+          return <div>{props.a} </div>;
+        } else {
+          return <div>{props.b} </div>;
+        }
       }
     </script>
   </body>
