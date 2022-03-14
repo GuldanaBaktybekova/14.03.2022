@@ -31,29 +31,41 @@
         </div>,
         document.querySelector("#root")
       );
+
+      function ArticleSummary(props) {
+        return (
+        <article>
+          <h2>
+            {props.title}
+            <a href="#"></a>
+          </h2>
+          <p>{props.children}</p>
+        </article>
+        );
+      }
       // function Link(props) {
       //   return <a href={props.to}>{props.children}<a/>;
       // }
-      function Person(props) {
-        return (
-          <div>
-            My name is {props.name} {props.lastName}
-          </div>
-        );
-      }
-      function Sum(props) {
-        return <div> {props.a + props.b}</div>;
-      }
-      function Larger(props) {
-        if (props.a > props.b) {
-          return <div>{props.a} </div>;
-        } else {
-          return <div>{props.b} </div>;
-        }
-      }
-      function Smaller(props) {
-        return <div> {props.a < props.b ? props.a : props.b}</div>;
-      }
+      // function Person(props) {
+      //   return (
+      //     <div>
+      //       My name is {props.name} {props.lastName}
+      //     </div>
+      //   ); 
+      // }
+      // function Sum(props) {
+      //   return <div> {props.a + props.b}</div>;
+      // }
+      // function Larger(props) {
+      //   if (props.a > props.b) {
+      //     return <div>{props.a} </div>;
+      //   } else {
+      //     return <div>{props.b} </div>;
+      //   }
+      // }
+      // function Smaller(props) {
+      //   return <div> {props.a < props.b ? props.a : props.b}</div>;
+      // }
     </script>
   </body>
 </html>
