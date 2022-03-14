@@ -14,11 +14,21 @@
     <div id="root"></div>
 
     <script type="text/babel">
-      ReactDOM.render(
+      ReactDOM.render((
         <div>
-          <Person />
+          <Person name="Guldana" lastName="Baktybekova" />
+          <Sum a={5} b={10}/>
+          <Sum a={10} b={5}/>
+          <Sum a={10} b={5}/>
         </div>
-      );
+      ), document.querySelector('#root'));
+
+      function Person(props) {
+        return <div>My name is {props.name} {props.lastName}</div>;
+      }
+      function Sum(props) {
+        return <div> {props.a + props.b}</div>;
+      }
     </script>
   </body>
 </html>
