@@ -36,7 +36,7 @@
         return <div> {props.a + props.b}</div>;
       }
       function Larger(props) {
-        if ({ a } > { b }) {
+        if (props.a > props.b) {
           return <div>{props.a} </div>;
         } else {
           return <div>{props.b} </div>;
