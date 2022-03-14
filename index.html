@@ -21,10 +21,19 @@
           <Sum a={10} b={5} />
           <Larger a={10} b={5} />
           <Larger a={5} b={10} />
+          <Smaller a={5} b={10} />
+          // <a href="#">Hello</a>
+          // <Link to="#">Hello</Link>
+          <ArticleSummary title="This is a sample article" url="#">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum,
+            amet.
+          </ArticleSummary>
         </div>,
         document.querySelector("#root")
       );
-
+      // function Link(props) {
+      //   return <a href={props.to}>{props.children}<a/>;
+      // }
       function Person(props) {
         return (
           <div>
@@ -41,6 +50,9 @@
         } else {
           return <div>{props.b} </div>;
         }
+      }
+      function Smaller(props) {
+        return <div> {props.a < props.b ? props.a : props.b}</div>;
       }
     </script>
   </body>
